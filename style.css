@@ -1,0 +1,244 @@
+:root {
+  --breakpoint-mobile-tablet: 425px;
+  --breakpoint-tablet-desktop: 992px;
+
+  font-size: 62.5%;
+
+  --clr-pr-dark-cyan: hsl(185, 75%, 39%);
+  --clr-pr-vr-drk-drsat-blue: hsl(229, 23%, 23%);
+  --clr-pr-drk-gray-blue: hsl(227, 10%, 46%);
+
+  --clr-neu-drk-gray: hsl(0, 0%, 59%);
+  --clr-neu-white: hsl(0, 0%, 100%);
+
+  --ff-primary: "Kumbh Sans", sans-serif;
+
+  --fs-500: 1.8rem;
+  --fs-600: 2rem;
+
+  --fs-body: var(--fs-500);
+
+  --fw-400: 400;
+  --fw-700: 700;
+}
+
+@media screen and (min-width: 992px) {
+  :root {
+    --fs-body: var(--fs-600);
+  }
+}
+
+/* CSS RESET */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Disabling Text Selection by User */
+* {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+/* Disabling Image Dragging */
+img {
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* FEM Attribution */
+.attribution {
+  margin-bottom: 1rem;
+  font-size: 11px;
+  text-align: center;
+  color: var(--clr-neu-white);
+}
+
+.attribution a {
+  color: var(--clr-pr-vr-drk-drsat-blue);
+}
+
+/* Utility Classes */
+.text-clr-pr-dark-cyan {
+  color: var(--clr-pr-dark-cyan);
+}
+
+.text-clr-pr-vr-drk-drsat-blue {
+  color: var(--clr-pr-vr-drk-drsat-blue);
+}
+
+.text-clr-pr-drk-gray-blue {
+  color: var(--clr-pr-drk-gray-blue);
+}
+
+.text-clr-neu-drk-gray {
+  color: var(--clr-neu-drk-gray);
+}
+
+.bg-clr-pr-dark-cyan {
+  background-color: var(--clr-pr-dark-cyan);
+}
+
+.bg-clr-pr-vr-drk-drsat-blue {
+  background-color: var(--clr-pr-vr-drk-drsat-blue);
+}
+
+.bg-clr-pr-drk-gray-blue {
+  background-color: var(--clr-pr-drk-gray-blue);
+}
+
+.bg-clr-neu-drk-gray {
+  background-color: var(--clr-neu-drk-gray);
+}
+
+.bg-clr-neu-white {
+  background-color: var(--clr-neu-white);
+}
+
+/* Body */
+body {
+  width: 100%;
+  position: relative;
+  background-color: var(--clr-pr-dark-cyan);
+  font-family: var(--ff-primary);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-400);
+}
+
+#card-with-bg {
+  position: relative;
+  display: grid;
+  place-items: center;
+  place-content: center;
+  min-height: 100vh;
+  overflow-y: hidden;
+}
+
+#top-left-bubble,
+#bottom-right-bubble {
+  position: absolute;
+  z-index: -1;
+}
+
+#top-left-bubble {
+  top: -10rem;
+  left: -10rem;
+}
+
+#bottom-right-bubble {
+  bottom: -10rem;
+  right: -10rem;
+}
+
+.profile-card {
+  border-radius: 2rem;
+  text-align: center;
+  margin: 2rem;
+}
+
+.card-bg {
+  border-radius: 2rem 2rem 0 0;
+}
+
+.profile-img {
+  border: 2rem var(--clr-neu-white) solid;
+  border-radius: 50%;
+  margin: -7rem auto 0;
+}
+
+.profile-card h1 {
+  color: var(--clr-pr-vr-drk-drsat-blue);
+  font-weight: var(--fw-700);
+}
+
+.profile-card h1 span {
+  font-weight: var(--fw-400);
+}
+
+.profile-card > p {
+  color: var(--clr-pr-drk-gray-blue);
+  margin-bottom: 2.5rem;
+}
+
+.count-grp {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-top: 0.1rem hsla(0, 0%, 59%, 0.603) solid;
+  padding: 2rem;
+}
+
+.count-info {
+}
+
+.count-info h2 {
+  font-weight: var(--fw-700);
+  color: var(--clr-pr-vr-drk-drsat-blue);
+}
+
+.count-info p {
+  color: var(--clr-pr-drk-gray-blue);
+}
+
+@media screen and (min-width: 992px) {
+  #top-left-bubble {
+    top: -50%;
+    left: 0;
+  }
+
+  #bottom-right-bubble {
+    bottom: -50%;
+    right: 0;
+  }
+}

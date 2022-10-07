@@ -161,7 +161,7 @@ body {
   place-items: center;
   place-content: center;
   min-height: 100vh;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 #top-left-bubble,
